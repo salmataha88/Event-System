@@ -1,0 +1,414 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Event System",
+    "collectionId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+    "dateExported": "2024-10-11T18:55:52.169Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "42dae7ea-5aec-4c0c-85a3-f61c0a3bb3b1",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-10-09T16:09:13.273Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2024-10-09T16:09:13.293Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Event",
+            "containerId": "",
+            "created": "2024-10-09T16:09:13.283Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "4f9514b1-af98-4a77-9ffd-290875982912",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "42dae7ea-5aec-4c0c-85a3-f61c0a3bb3b1",
+            "name": "Get user",
+            "url": "http://localhost:3000/user/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-09T16:09:13.277Z",
+            "modified": "2024-10-09T17:01:19.778Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2UxQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA2YTVmOTQ4OGRjZWViMmI4N2E5NzMiLCJyb2xlIjoidXNlciIsImlhdCI6MTcyODQ5MTQzMSwiZXhwIjoxNzI4NDk4NjMxfQ.9rXSBb1_AzDpo6WcCDkqAZx-xD8DTldVkHNJ0m8Wr-E",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "0c95454a-ea95-4609-a402-747735d26029",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "42dae7ea-5aec-4c0c-85a3-f61c0a3bb3b1",
+            "name": "SignUp",
+            "url": "http://localhost:3000/user/signup",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-10-09T16:09:13.277Z",
+            "modified": "2024-10-09T20:40:35.478Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Fullname\": \"Salma Ahmed\",\n  \"username\": \"salma1\",\n  \"email\": \"salma@example.com\",\n  \"mobile\": \"12345678915\",\n  \"password\": \"password\",\n  \"role\": \"organizer\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1eefaa8f-a3c6-4aef-9ada-bb4a6cf156de",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "42dae7ea-5aec-4c0c-85a3-f61c0a3bb3b1",
+            "name": "login",
+            "url": "http://localhost:3000/user/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-10-09T16:09:13.277Z",
+            "modified": "2024-10-11T18:17:05.112Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"salma1\",\n  \"password\": \"password\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6d74a13a-f991-486a-912c-6924ab8d25c8",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "create event",
+            "url": "http://localhost:3000/event/create",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-10-09T18:56:11.638Z",
+            "modified": "2024-10-11T18:17:52.691Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Tech\",\n  \"description\": \"This is tech event\",\n  \"eventDate\": \"2024-10-12\",\n  \"time\": \"10:00 AM\",\n  \"price\": 200,\n  \"seats\": 200,\n  \"location\": \"Cairo\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA5NmIzZDJmNTlhODMyYjE5YjIzOWMiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NjcwNjI1LCJleHAiOjE3Mjg2Nzc4MjV9.8J4bIIIdS4xerESuO2bB7ofxWPeNAbU5P316NXexLYE",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "3278d6b0-fa74-4c75-b771-ca8fdc3ff540",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Get Events",
+            "url": "http://localhost:3000/event/",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-10-09T20:31:36.751Z",
+            "modified": "2024-10-09T20:43:31.267Z",
+            "headers": []
+        },
+        {
+            "_id": "77b038f7-c2a8-4541-aa3e-4f6ac601d9af",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "update ",
+            "url": "http://localhost:3000/event/update?eventId=6706eae1e785bab13029f0aa",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-10-09T20:31:52.608Z",
+            "modified": "2024-10-09T20:45:02.660Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "eventId",
+                    "value": "6706eae1e785bab13029f0aa",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Tech Event\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA2ZWE0M2U3ODViYWIxMzAyOWYwYTYiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NTA2NTE4LCJleHAiOjE3Mjg1MTM3MTh9.P9N-pMGdOvOCTC8qhaXbIulrSfg2IWFrdm-JhaTpXcg",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "609c5998-3d55-49ce-b612-ae0bd420daab",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Delete",
+            "url": "http://localhost:3000/event/delete?eventId=6706eae1e785bab13029f0aa",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-10-09T20:32:01.588Z",
+            "modified": "2024-10-09T20:50:40.840Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "eventId",
+                    "value": "6706eae1e785bab13029f0aa",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA2ZWE0M2U3ODViYWIxMzAyOWYwYTYiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NTA2NTE4LCJleHAiOjE3Mjg1MTM3MTh9.P9N-pMGdOvOCTC8qhaXbIulrSfg2IWFrdm-JhaTpXcg",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "9049a1b1-0850-46b7-8c19-889ce837b055",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Registered Users",
+            "url": "http://localhost:3000/event/RegisteredUsers?eventId=6706de9393c61bafb056613a",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-10-09T20:32:15.856Z",
+            "modified": "2024-10-11T18:27:43.859Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "eventId",
+                    "value": "6706de9393c61bafb056613a",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXhhbXBsZS5jb20iLCJpZCI6IjY3MDk2MDA5NjE2MmJiYzQ1ZjIzYmZiYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyODY2ODA2NywiZXhwIjoxNzI4Njc1MjY3fQ.whzLPRE7n1KmpT4So-nXzSXsKxfBncZW4vnHdLr7_po",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "22fd3240-3e25-4750-a819-535e9ea4c1ec",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Register Event",
+            "url": "http://localhost:3000/event/registerEvent?eventId=6706eae1e785bab13029f0aa",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-10-09T17:45:57.655Z",
+            "modified": "2024-10-11T18:24:49.206Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "eventId",
+                    "value": "6706eae1e785bab13029f0aa",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA5NmIzZDJmNTlhODMyYjE5YjIzOWMiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NjcwNjI1LCJleHAiOjE3Mjg2Nzc4MjV9.8J4bIIIdS4xerESuO2bB7ofxWPeNAbU5P316NXexLYE",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "ea0a6e37-012c-48b7-ba70-1ec67877c1e1",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "42dae7ea-5aec-4c0c-85a3-f61c0a3bb3b1",
+            "name": "update",
+            "url": "http://localhost:3000/user/update?userId=6706a5f9488dceeb2b87a973",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-10-11T15:53:25.268Z",
+            "modified": "2024-10-11T16:56:02.712Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "6706a5f9488dceeb2b87a973",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Fullname\":\"John\",\n  \"username\" :\"John2\",\n  \"password\" : \"password2\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2UxQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA2YTVmOTQ4OGRjZWViMmI4N2E5NzMiLCJyb2xlIjoidXNlciIsImlhdCI6MTcyODY2MjA0OSwiZXhwIjoxNzI4NjY5MjQ5fQ.E8mgsvR24ciIaibnxJxGPthGLKj97XDQxvugfExRUwY",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "7241a559-a42c-4011-9e9f-b2fb01cf7307",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Get Events of user",
+            "url": "http://localhost:3000/event/userEvents",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-10-09T18:15:14.584Z",
+            "modified": "2024-10-11T18:35:50.114Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA5NmIzZDJmNTlhODMyYjE5YjIzOWMiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NjcwNjI1LCJleHAiOjE3Mjg2Nzc4MjV9.8J4bIIIdS4xerESuO2bB7ofxWPeNAbU5P316NXexLYE",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "dacb27af-c7a7-4243-9dac-3c7bcaac180a",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "create super admin",
+            "url": "http://localhost:3000/admin/superadmin",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-10-11T17:06:12.978Z",
+            "modified": "2024-10-11T17:11:54.867Z",
+            "headers": []
+        },
+        {
+            "_id": "6dbe9ad5-bcf6-4875-8364-c336db2b5306",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "cancel event",
+            "url": "http://localhost:3000/event/cancelEvent?eventId=6706de9393c61bafb056613a",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2024-10-09T18:20:09.932Z",
+            "modified": "2024-10-11T18:20:36.300Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "eventId",
+                    "value": "6706de9393c61bafb056613a",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbG1hQGV4YW1wbGUuY29tIiwiaWQiOiI2NzA5NmIzZDJmNTlhODMyYjE5YjIzOWMiLCJyb2xlIjoib3JnYW5pemVyIiwiaWF0IjoxNzI4NjcwNjI1LCJleHAiOjE3Mjg2Nzc4MjV9.8J4bIIIdS4xerESuO2bB7ofxWPeNAbU5P316NXexLYE",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "8b8e05af-8d39-484c-9ee8-97807ae8fe65",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "add admin",
+            "url": "http://localhost:3000/admin/add",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-10-11T17:06:28.962Z",
+            "modified": "2024-10-11T17:37:33.141Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Admin2\",\n  \"email\": \"admin2@example.com\",\n  \"password\": \"password\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXhhbXBsZS5jb20iLCJpZCI6IjY3MDk2MDA5NjE2MmJiYzQ1ZjIzYmZiYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyODY2ODA2NywiZXhwIjoxNzI4Njc1MjY3fQ.whzLPRE7n1KmpT4So-nXzSXsKxfBncZW4vnHdLr7_po",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "aa509af1-22d4-454a-b45e-e37abf5d70b2",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "get admins",
+            "url": "http://localhost:3000/admin/getAllAdmins",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-10-11T17:06:38.115Z",
+            "modified": "2024-10-11T17:37:46.313Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXhhbXBsZS5jb20iLCJpZCI6IjY3MDk2MDA5NjE2MmJiYzQ1ZjIzYmZiYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyODY2ODA2NywiZXhwIjoxNzI4Njc1MjY3fQ.whzLPRE7n1KmpT4So-nXzSXsKxfBncZW4vnHdLr7_po",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "ed46a473-4477-48ce-8889-62efb4eb88af",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "delete admin",
+            "url": "http://localhost:3000/admin/?adminId=6709625d5f219fb8e3d755e5",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-10-11T17:06:55.818Z",
+            "modified": "2024-10-11T17:38:43.893Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "adminId",
+                    "value": "6709625d5f219fb8e3d755e5",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXhhbXBsZS5jb20iLCJpZCI6IjY3MDk2MDA5NjE2MmJiYzQ1ZjIzYmZiYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyODY2ODA2NywiZXhwIjoxNzI4Njc1MjY3fQ.whzLPRE7n1KmpT4So-nXzSXsKxfBncZW4vnHdLr7_po",
+                "bearerPrefix": "Event"
+            }
+        },
+        {
+            "_id": "73c02d34-ec12-4865-906b-65e6ba2b50fd",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "0da7b341-ce0c-4265-a96f-99d566f248dd",
+            "name": "login",
+            "url": "",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-10-11T18:16:09.423Z",
+            "modified": "2024-10-11T18:16:09.423Z",
+            "headers": []
+        },
+        {
+            "_id": "c3cf9c58-5280-48f4-a40c-5dc99d7c9717",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "get events by organizer",
+            "url": "http://localhost:3000/event/organizer?id=67096b3d2f59a832b19b239c",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2024-10-11T18:40:57.789Z",
+            "modified": "2024-10-11T18:42:52.889Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "67096b3d2f59a832b19b239c",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "e98a4937-e7fd-4fbc-bdcf-210a10b82403",
+            "colId": "9584c7f6-585f-42cd-8b63-a4b2b8807761",
+            "containerId": "19600241-ee14-4930-96fb-8467f8b8d0ee",
+            "name": "Get event by name",
+            "url": "http://localhost:3000/event/name?name=Tech",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-10-11T18:43:56.863Z",
+            "modified": "2024-10-11T18:49:14.871Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "Tech",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "RtkEfsw9q7iE5JsVY4FGQROdwCG01c__nZWQnuZ7Ij4f4W3ZlVR3_vNNbc8Trg_mlPDwsJ66g_3zw29Bffmvug"
+}
