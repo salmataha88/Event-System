@@ -1,8 +1,8 @@
 import userModel from '../../../DB/models/user.js'
-import eventModel from '../../../DB/models/event.js'
+import { sendEmailService } from '../../services/sendEmailService.js'
+
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import moment from 'moment-timezone'
 
 export const SignUp = async (req, res, next) => {
     const { Fullname, username, email, mobile, password, role } = req.body;
@@ -35,6 +35,27 @@ export const SignUp = async (req, res, next) => {
         return res.status(400).json({ message: 'You are not authorized to create an admin account' })
     }
 
+    //Confirm Email
+    const token = jwt.sign(
+        {
+            email
+        },
+        process.env.Confirmation_Token_Secret,
+        { expiresIn: '1h' },
+    )
+    
+    const confirmLink = `http://localhost:3000/user/confirmEmail/${token}`
+
+    const isEmailSent = await sendEmailService({
+        to : email,
+        message : `<a href="${confirmLink}">Click to confirm email</a>`,
+        subject: 'Confirm Email',
+    })
+
+    if(!isEmailSent){
+        return res.status(500).json({ message: 'Email is not sent , Please try again later' })
+    }
+
     const hashedPassword = bcrypt.hashSync(password, +process.env.SALT_ROUNDS)
     const user = new userModel({ 
         Fullname, 
@@ -48,6 +69,21 @@ export const SignUp = async (req, res, next) => {
     res.status(201).json({ message: 'User Registered Successfully', user })
 }
 
+export const confirmEmail = async (req, res, next) => {
+    const { token } = req.params;
+    const decoded = jwt.verify(token, process.env.Confirmation_Token_Secret)
+    const user = await userModel.findOne({ email: decoded.email })
+    if (!user) {
+        return res.status(400).send(`<h2>User is not found</h2>` )
+    }
+    if (user.isConfirmed) {
+        res.status(400).send(`<h2>Email is already confirmed</h2>` )
+    }
+    user.isConfirmed = true
+    await user.save()
+    res.status(200).send(`<h2>Email is confirmed, you can now login </h2>` )
+}
+
 export const SignIn = async (req, res, next) => {
     const { email,username, password } = req.body;
 
@@ -58,7 +94,7 @@ export const SignIn = async (req, res, next) => {
         return res.status(400).json({ message: 'Please fill all fields' })
     }
     
-    const isUserExists = await userModel.findOne({ $or: [{ email }, { username }] })
+    const isUserExists = await userModel.findOne({ $or: [{ email , isConfirmed : true}, { username , isConfirmed : true}] })
 
     if (!isUserExists){
         return res.status(400).json({ message: 'Please Register first' })

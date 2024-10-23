@@ -30,6 +30,10 @@ var userModel = new Schema({
         enum: ['user','organizer'], //organizer can add update delete events and user can only view events and register
         default:'user' 
     },
+    isConfirmed:{
+        type:Boolean,
+        default:false,
+    },
     registerdEvents:[{
         type:Schema.Types.ObjectId,
         ref:'Event'
