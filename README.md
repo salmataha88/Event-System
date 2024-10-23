@@ -22,7 +22,7 @@ I have created a simple event management system using nodejs and MongoDB.
 **Features**
 
     • User Registration:
-        ○ Allow users to sign up for the system. 
+        ○ Allow users to sign up for the system and send confirmation mail before login. 
         ○ Users can log in 
         ○ Users can register for various events. 
         
